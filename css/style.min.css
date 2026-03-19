@@ -356,6 +356,11 @@ h2,
     font-size: calc(1.325rem + 0.9vw);
   }
 }
+/* Reset all styles for the specific H2 element while keeping the element */
+h2.text-primary.font-weight-medium.m-0{all:revert!important}
+@media(max-width:1200px){h2.text-primary.font-weight-medium.m-0{all:revert!important}}
+h2.text-primary.font-weight-medium.m-0{all:revert!important}
+#blog-carousel .carousel-item>img.w-100,.carousel-item>img.w-100{transform:scaleY(.8);transform-origin:center top;display:block;width:100%;height:auto}
 h3,
 .h3 {
   font-size: 1.75rem;
@@ -8774,7 +8779,7 @@ h6,
   .nav-bar.container-lg,
   .nav-bar.container-xl {
     position: relative;
-    background: #33211d;
+    background: #555;
   }
 }
 .navbar-dark .navbar-nav .nav-link {
@@ -8786,7 +8791,7 @@ h6,
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #da9f5b;
+  color: #742929;
 }
 .overlay-top::before,
 .overlay-bottom::after {
