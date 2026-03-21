@@ -399,6 +399,81 @@ h2.text-primary.font-weight-medium.m-0 {
   }
 }
 
+/* Custom image size for 'clima' */
+.clima {
+  width: 40%;
+  max-width: 140px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-left: 0; /* align left inside the column */
+  margin-right: auto;
+}
+
+/* On small screens center the image and reduce max-width */
+@media (max-width: 576px) {
+  .clima {
+    width: 60%;
+    max-width: 120px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 577px) {
+  .clima {
+    width: 45%;
+    max-width: 130px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+/* About section: center image in its column and responsive ordering */
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-row > .col-lg-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-image-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-image-col .image-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-image-col .clima {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0; /* ensure no extra margins cause overlap */
+}
+
+@media (max-width: 768px) {
+  .about-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .about-story { order: 1; }
+  .about-image-col { order: 2; }
+  .about-vision { order: 3; }
+  .about-image-col .clima {
+    max-width: 220px;
+    width: 70%;
+  }
+}
+
 h3, .h3 {
   font-size: 1.75rem;
 }
