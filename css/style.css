@@ -9729,12 +9729,21 @@ h6,
   list-style-type: none;
 }
 
-.reservation,
 .page-header,
-.offer,
 .footer {
-  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)), url(../img/bg.jpg);
+  background: linear-gradient(rgba(51, 33, 29, 0.45), rgba(51, 33, 29, 0.45)), url(../img/aire-acondicionado.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer {
+  background: linear-gradient(rgba(51, 33, 29, 0.45), rgba(51, 33, 29, 0.45)), url(../img/aire-acondicionado.jpeg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.page-header {
+  background-position: center center;
+  background-size: 110% 110%;
 }
