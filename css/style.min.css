@@ -8891,8 +8891,8 @@ h6,
 .offer,
 .footer {
   background:
-    linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)),
-    url(../img/bg.jpg);
+    linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.4)),
+    url(../img/discount.jpeg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
