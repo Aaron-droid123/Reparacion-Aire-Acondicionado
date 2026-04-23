@@ -9747,3 +9747,312 @@ h6,
   background-position: center center;
   background-size: 110% 110%;
 }
+
+/* Responsive layout tuning */
+.carousel-item {
+  min-height: 520px;
+}
+
+.carousel-item > img {
+  min-height: 520px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  padding: 2rem;
+}
+
+.carousel-caption h2 {
+  max-width: 26ch;
+  line-height: 1.35;
+}
+
+.carousel-caption .display-1 {
+  line-height: 1.05;
+  margin-bottom: 1rem !important;
+}
+
+.navbar-dark .navbar-brand h1 {
+  margin-bottom: 0;
+}
+
+.about-image-col[style] {
+  min-height: 320px !important;
+}
+
+.reservation .text-center[style] {
+  border-radius: 18px;
+}
+
+.footer .input-group .form-control {
+  min-height: 58px;
+}
+
+.footer .input-group .btn {
+  min-height: 58px;
+}
+
+.contact-form iframe,
+iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .container-fluid.nav-bar,
+  .nav-bar.container-sm,
+  .nav-bar.container-md,
+  .nav-bar.container-lg,
+  .nav-bar.container-xl {
+    position: relative;
+  }
+
+  .navbar-dark .navbar-brand h1.display-4 {
+    font-size: 2rem;
+  }
+
+  .navbar-toggler {
+    margin-right: 1rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .navbar-nav .dropdown-menu {
+    background: rgba(255, 251, 242, 0.08);
+    border: 0;
+    text-align: center;
+  }
+
+  .carousel-item,
+  .carousel-item > img {
+    min-height: 72vh;
+  }
+
+  .carousel-caption {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem !important;
+    max-width: 18ch;
+  }
+
+  .carousel-caption .display-1 {
+    font-size: 2.35rem;
+    line-height: 1.05;
+  }
+
+  .section-title {
+    padding: 70px 0 25px 0;
+  }
+
+  .section-title::after {
+    height: 58px;
+  }
+
+  .about-image-col[style] {
+    min-height: 220px !important;
+  }
+
+  .about-image-col .clima {
+    width: 64%;
+    max-width: 180px;
+  }
+
+  .reservation .p-5,
+  .reservation .text-center.p-5 {
+    padding: 1.5rem !important;
+  }
+
+  .reservation .display-3 {
+    font-size: 2.25rem;
+  }
+
+  .menu-price {
+    width: 38px;
+    height: 38px;
+    right: 6px;
+    font-size: 0.85rem;
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .footer .input-group {
+    display: block;
+  }
+
+  .footer .input-group .form-control,
+  .footer .input-group .btn,
+  .footer .input-group-append {
+    width: 100%;
+    display: block;
+  }
+
+  .footer .input-group .btn {
+    margin-top: 0.75rem;
+  }
+
+  iframe {
+    height: 320px !important;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .carousel-item,
+  .carousel-item > img {
+    min-height: 560px;
+  }
+
+  .carousel-caption {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1rem;
+    max-width: 20ch;
+  }
+
+  .carousel-caption .display-1 {
+    font-size: 3rem;
+  }
+
+  .section-title {
+    padding: 78px 0 28px 0;
+  }
+
+  .about-image-col[style] {
+    min-height: 260px !important;
+  }
+
+  .reservation .p-5,
+  .reservation .text-center.p-5 {
+    padding: 2rem !important;
+  }
+
+  iframe {
+    height: 360px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-item,
+  .carousel-item > img {
+    min-height: 620px;
+  }
+
+  .carousel-caption {
+    padding: 2rem 2.25rem 3.25rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption .display-1 {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    padding: 90px 0 30px 0;
+  }
+
+  .about-image-col[style] {
+    min-height: 280px !important;
+  }
+
+  .reservation .p-5,
+  .reservation .text-center.p-5 {
+    padding: 2.25rem !important;
+  }
+
+  .footer .input-group .btn {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  iframe {
+    height: 400px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .container-fluid.nav-bar,
+  .nav-bar.container-sm,
+  .nav-bar.container-md,
+  .nav-bar.container-lg,
+  .nav-bar.container-xl {
+    position: relative;
+    background: #33211D;
+  }
+
+  .navbar {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .carousel-item,
+  .carousel-item > img {
+    min-height: 720px;
+  }
+
+  .carousel-caption {
+    padding: 2.5rem 3rem 4rem;
+  }
+
+  .carousel-caption .display-1 {
+    font-size: 5.5rem;
+  }
+
+  .reservation .text-center.p-5,
+  .reservation .p-5 {
+    padding: 2.75rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1320px;
+  }
+
+  .carousel-item,
+  .carousel-item > img {
+    min-height: 820px;
+  }
+
+  .carousel-caption {
+    padding: 3rem 4rem 4.5rem;
+  }
+
+  .carousel-caption .display-1 {
+    font-size: 6.5rem;
+  }
+
+  .section-title {
+    padding-top: 130px;
+  }
+}
