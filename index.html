@@ -39,9 +39,9 @@
                     <a href="index.html" class="nav-item nav-link active">Inicio</a>
                     <a href="about.html" class="nav-item nav-link">Nosotros</a>
                     <a href="service.html" class="nav-item nav-link">Servicios</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Páginas</a>
-                        <div class="dropdown-menu text-capitalize">
+                    <div class="nav-item dropdown custom-pages-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Páginas</a>
+                        <div class="dropdown-menu text-capitalize" aria-labelledby="navbarDropdown">
                             <a href="reservation.html" class="dropdown-item">Reservación</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonios</a>
                         </div>
@@ -186,15 +186,46 @@ Creemos que cada hogar merece un ambiente cómodo, y trabajamos cada día para l
             <h1 class="text-white mb-3">oferta para el inicio de verano</h1>
             <h4 class="text-white font-weight-normal mb-4 pb-3">Desde el 21 de junio hasta el 28 de junio de 2026</h4>
             <form class="form-inline justify-content-center mb-4">
-                <div class="input-group">
-                    <input type="text" class="form-control p-4" placeholder="Tu Email" style="height: 60px;">
+                <div class="input-group newsletter-phone">
+                    <div class="input-group-prepend">
+                        <select class="custom-select border-light country-code">
+                            <optgroup label="América">
+                                <option value="+1">+1 USA/CA</option>
+                                <option value="+52">+52 México</option>
+                                <option value="+54">+54 Argentina</option>
+                                <option value="+55">+55 Brasil</option>
+                                <option value="+56">+56 Chile</option>
+                                <option value="+57">+57 Colombia</option>
+                                <option value="+58">+58 Venezuela</option>
+                                <option value="+51">+51 Perú</option>
+                                <option value="+507">+507 Panamá</option>
+                                <option value="+506">+506 Costa Rica</option>
+                            </optgroup>
+                            <optgroup label="Europa">
+                                <option value="+34">+34 España</option>
+                                <option value="+44">+44 Reino Unido</option>
+                                <option value="+33">+33 Francia</option>
+                                <option value="+39">+39 Italia</option>
+                                <option value="+49">+49 Alemania</option>
+                                <option value="+31">+31 Países Bajos</option>
+                                <option value="+41">+41 Suiza</option>
+                                <option value="+48">+48 Polonia</option>
+                                <option value="+32">+32 Bélgica</option>
+                                <option value="+351">+351 Portugal</option>
+                                <option value="+45">+45 Dinamarca</option>
+                                <option value="+46">+46 Suecia</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <input type="tel" class="form-control border-light phone-number" placeholder="Tu número de celular" style="height: 60px;">
                     <div class="input-group-append">
-                        <button class="btn btn-primary font-weight-bold px-4" type="submit">inscribirse</button>
+                        <button id="whatsapp-sale" class="btn btn-primary font-weight-bold px-4" type="submit">inscribirse</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+
     <!-- Offer End -->
 
 
@@ -216,32 +247,33 @@ Creemos que cada hogar merece un ambiente cómodo, y trabajamos cada día para l
                     <div class="col-lg-6">
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, 0.2);">
                             <h1 class="text-white mb-4 mt-5">Reserve una visita para revisar su aire acondicionado!</h1>
-                            <form class="mb-5">
+                            <form id="reservation-form" class="mb-5">
                                 <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Nombre"
+                                    <input id="reservation-name" type="text" class="form-control bg-transparent border-primary p-4" placeholder="Nombre" style="color: white;"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email"
+                                    <input id="reservation-email" type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email" style="color: white;"
                                         required="required" />
                                 </div>
                                 <div class="form-group">
                                     <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Fecha" data-target="#date" data-toggle="datetimepicker"/>
+                                        <input id="reservation-date" type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Fecha" data-target="#date" data-toggle="datetimepicker" style="color: white;" required="required"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Hora" data-target="#time" data-toggle="datetimepicker"/>
+                                        <input id="reservation-time" type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Hora" data-target="#time" data-toggle="datetimepicker" style="color: white;" required="required"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;">
-                                        <option selected>Jose Aguilera</option>
-                                        <option value="1">Jesus Arce</option>
-                                        <option value="2">Maria Conley</option>
-                                        <option value="3">Ana Martinez</option>
-                                        <option value="4">Carlos Lopez</option>
+                                    <select id="reservation-worker" class="custom-select bg-transparent border-primary px-4" style="height: 49px; color: white;" required="required">
+                                        <option value="" disabled selected hidden>Elige al trabajador que deseas que venga</option>
+                                        <option value="Jose Aguilera" style="color: black;">Jose Aguilera</option>
+                                        <option value="Jesus Arce" style="color: black;">Jesus Arce</option>
+                                        <option value="Maria Conley" style="color: black;">Maria Conley</option>
+                                        <option value="Ana Martinez" style="color: black;">Ana Martinez</option>
+                                        <option value="Estith Vargas" style="color: black;">Estith Vargas</option>
                                     </select>
                                 </div>
                                 
@@ -352,14 +384,9 @@ Creemos que cada hogar merece un ambiente cómodo, y trabajamos cada día para l
             </div>
             <div class="col-lg-6 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Boletín</h4>
-                <p>Recibe noticias, promociones y actualizaciones directamente en tu correo.</p>
+                <p>Mandar mensaje en whatsapp para recibir nuestras novedades.</p>
                 <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Tu correo electrónico">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Suscribirse</button>
-                        </div>
-                    </div>
+                    <button id="whatsapp-subscribe" class="btn btn-lg btn-outline-light btn-lg-square" type="button"><i class="fab fa-whatsapp"></i></button>
                 </div>
             </div>
         </div>
@@ -387,7 +414,71 @@ Creemos que cada hogar merece un ambiente cómodo, y trabajamos cada día para l
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <script>
+        document.getElementById('whatsapp-subscribe').addEventListener('click', function () {
+            var cleaned = ("+51925 922 034").replace(/\D/g, '');
+            if (!cleaned) {
+                alert('Por favor ingresa un número de celular válido antes de continuar.');
+                return;
+            }
+            var message = 'Hola, me gustaría recibir información detallada sobre el servicio y sus novedades. Quedo atent@ a su respuesta. Gracias.';
+            var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + encodeURIComponent(cleaned) + '&text=' + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 
+   <script>
+        document.getElementById('whatsapp-sale').addEventListener('click', function () {
+            var cleaned = ("+51925 922 034").replace(/\D/g, '');
+            if (!cleaned) {
+                alert('Por favor ingresa un número de celular válido antes de continuar.');
+                return;
+            }
+            var message = 'Hola, complété el formulario en su sitio web y me gustaría recibir la promoción de descuento. Quedo atento a su respuesta. Gracias.';
+            var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + encodeURIComponent(cleaned) + '&text=' + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+        });
+
+        document.getElementById('reservation-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var name = document.getElementById('reservation-name').value.trim();
+            var email = document.getElementById('reservation-email').value.trim();
+            var date = document.getElementById('reservation-date').value.trim();
+            var time = document.getElementById('reservation-time').value.trim();
+            var worker = document.getElementById('reservation-worker').value;
+
+            if (!name || !email || !date || !time || !worker) {
+                alert('Por favor completa todos los campos antes de enviar la reserva.');
+                return;
+            }
+
+            var phoneMap = {
+                'Jose Aguilera': '+51999999991',
+                'Jesus Arce': '+51999999992',
+                'Maria Conley': '+51999999993',
+                'Ana Martinez': '+51999999994',
+                'Estith Vargas': '+51925 922 034'
+            };
+
+            var workerPhone = phoneMap[worker];
+            if (!workerPhone) {
+                alert('Selecciona un trabajador válido antes de enviar la reserva.');
+                return;
+            }
+
+            var message = 'Hola, deseo reservar un servicio:' +
+                '\nNombre: ' + name +
+                '\nEmail: ' + email +
+                '\nFecha: ' + date +
+                '\nHora: ' + time +
+                '\nTrabajador: ' + worker +
+                '\n\nGracias.';
+
+            var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + encodeURIComponent(workerPhone.replace(/\D/g, '')) + '&text=' + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "form-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/form-cro/SKILL.md",
+      "computedHash": "9eb72b95e9e1df985af42541c498cdd11aca914da97a59d07f397d77f17519a1"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",

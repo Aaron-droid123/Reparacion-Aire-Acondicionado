@@ -40,7 +40,7 @@
                     <a href="index.html" class="nav-item nav-link">Inicio</a>
                     <a href="about.html" class="nav-item nav-link">Nosotros</a>
                     <a href="service.html" class="nav-item nav-link active">Servicios</a>
-                    <div class="nav-item dropdown">
+                    <div class="nav-item dropdown custom-pages-dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
                         <div class="dropdown-menu text-capitalize">
                             <a href="reservation.html" class="dropdown-item">Reservacion</a>
@@ -175,14 +175,9 @@
             </div>
             <div class="col-lg-6 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Boletín</h4>
-                <p>Recibe noticias, promociones y actualizaciones directamente en tu correo.</p>
+                <p>Mandar mensaje en whatsapp para recibir nuestras novedades.</p>
                 <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Tu correo electrónico">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Suscribirse</button>
-                        </div>
-                    </div>
+                    <button id="whatsapp-subscribe" class="btn btn-lg btn-outline-light btn-lg-square" type="button"><i class="fab fa-whatsapp"></i></button>
                 </div>
             </div>
         </div>
@@ -211,6 +206,18 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <script>
+        document.getElementById('whatsapp-subscribe').addEventListener('click', function () {
+            var cleaned = ("+51925 922 034").replace(/\D/g, '');
+            if (!cleaned) {
+                alert('Por favor ingresa un número de celular válido antes de continuar.');
+                return;
+            }
+            var message = 'Hola, complété el formulario en su sitio web y me gustaría recibir información detallada sobre el servicio. Quedo atento a su respuesta. Gracias.';
+            var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + encodeURIComponent(cleaned) + '&text=' + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
